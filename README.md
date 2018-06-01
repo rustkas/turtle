@@ -1,5 +1,7 @@
 # turtle website
 
+**The gh-pages branch isn't used anymore. Use the `docs/` folder on the master branch.**
+
 ## Setup
 
 Make sure you have ruby installed.
