@@ -85,11 +85,13 @@ pub(crate) fn from_piston_event<F>(event: &PistonEvent, to_local_coords: F) -> O
                 Button::Keyboard(key) => KeyPressed(key),
                 Button::Mouse(button) => MouseButtonPressed(button),
                 Button::Controller(button) => ControllerButtonPressed(button),
+                Button::Hat(_) => unimplemented!(), //TODO: Figure out which events we need
             },
             ButtonState::Release => match button {
                 Button::Keyboard(key) => KeyReleased(key),
                 Button::Mouse(button) => MouseButtonReleased(button),
                 Button::Controller(button) => ControllerButtonReleased(button),
+                Button::Hat(_) => unimplemented!(), //TODO: Figure out which events we need
             },
         },
         Input::Move(motion) => match motion {
