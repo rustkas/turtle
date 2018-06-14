@@ -84,7 +84,7 @@ impl Renderer {
         let window_settings = WindowSettings::new(
             &*state.drawing().title,
             (state.drawing().width, state.drawing().height)
-        ).exit_on_esc(true).opengl(OpenGL::V3_3).srgb(false);
+        ).exit_on_esc(true).opengl(OpenGL::V3_3);
 
         // Need to create a GlutinWindow through WindowSettings::build() and then pass that to
         // PistonWindow::new(). PistonWindow has a hardcoded `srgb(true)` in its implementation
